@@ -1,0 +1,6 @@
+
+try:
+    n=input()
+    print(f"Reversed String:{n[::-1]}")
+except ValueError:
+    print("Input cannot be empty!.")
