@@ -13,3 +13,12 @@ import json
 with open("data.json",'r') as file:
     data=json.load(file)
     print(data)
+
+#error handler
+import json
+invalid="{'name':'john','john'=30}"
+try:
+    data=json.loads(invalid)
+    print(data)
+except json.JSONDecodeError as e:
+    print("invalid json:",e)
