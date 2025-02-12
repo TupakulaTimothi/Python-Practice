@@ -1,0 +1,21 @@
+from abc import ABC, abstractmethod
+class bank(ABC):
+    def __init__(self,balance,ac_number):
+        self.balance=balance
+        self.ac_number=ac_number
+    @abstractmethod
+    def calculate(self):
+        pass
+    @abstractmethod
+    def withdraw(self,amount):
+        pass
+    def get_balance(self):
+        return self.balance
+
+class account(bank):
+    def __init__(self,acc_number,balance,intrest):
+        super().__init__(acc_number,balance)
+        self.intrest=intrest
+    def calculate(self):
+        intrest=self.balance *self.intrest
+        return intrest
