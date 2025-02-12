@@ -1,0 +1,18 @@
+#Duck Typing or dynamic typing
+ class t1:
+     def execute(self):
+         print("one")
+ class t2:
+     def t21(self,idle):
+         print("2")
+         idle.execute()
+
+class t3:
+     def t31(self,idle):
+         print("3")
+         idle.t21(self)
+ o1=t1()
+ o2=t2()
+ o3=t3()
+ o2.t21(o1)
+ o3.t31(o2)
